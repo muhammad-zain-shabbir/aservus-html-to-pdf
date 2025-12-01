@@ -19,7 +19,11 @@ const PORT = process.env.PORT || 3000;
 app.use(helmet({
     contentSecurityPolicy: false, // Disable for simplicity, configure properly in production
 }));
-app.use(cors());
+// Allow all origins for now (we'll restrict later)
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST']
+}));
 
 // Rate limiting
 const limiter = rateLimit({
@@ -300,5 +304,6 @@ process.on('unhandledRejection', (reason, promise) => {
 if (require.main === module) {
     startServer();
 }
+
 
 module.exports = app;
