@@ -30,3 +30,28 @@ A high-performance, commercial-grade HTML to PDF conversion backend for [Aservus
 | `/api/convert` | POST | Main conversion endpoint |
 
 ## 📦 Project Structure
+
+# aservus-html-to-pdf/
+├── server.js # Main Express server (8080 lines)
+├── package.json # Dependencies and scripts
+└── README.md # This file
+
+
+## 🔧 Quick Setup
+
+### Files Required (Only 2 files needed!)
+
+1. **`server.js`** - Main Express server
+2. **`package.json`** - Dependencies and configuration
+
+### Railway Deployment (Automatic)
+
+1. **Push to GitHub** - Railway auto-deploys on commit
+2. **No configuration needed** - Railway detects Node.js app
+3. **Auto-scaling** - Railway handles everything
+
+## 📄 API Documentation
+
+### Health Check
+```http
+GET /health
